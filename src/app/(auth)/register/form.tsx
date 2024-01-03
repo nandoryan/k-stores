@@ -53,7 +53,11 @@ const RegisterForm = () => {
     >
       {error && (
         <Form.Item>
-          <Alert message={error} type="error" showIcon />
+          <Alert
+            message={error.replace(/'/g, "&apos;")}
+            type="error"
+            showIcon
+          />
         </Form.Item>
       )}
       {isRegisterSuccess && (

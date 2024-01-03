@@ -56,7 +56,11 @@ const LoginForm = () => {
     >
       {error && (
         <Form.Item>
-          <Alert message={error} type="error" showIcon />
+          <Alert
+            message={error.replace(/'/g, "&apos;")}
+            type="error"
+            showIcon
+          />
         </Form.Item>
       )}
       <p className="text-2xl font-bold">Hello, Welcome Back</p>
