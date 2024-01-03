@@ -5,7 +5,7 @@ import { compare } from "bcrypt";
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 
-export const OPTIONS: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: "credentials", //use this for custom login
@@ -58,6 +58,6 @@ export const OPTIONS: NextAuthOptions = {
   },
 };
 
-const handler = NextAuth(OPTIONS);
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };
