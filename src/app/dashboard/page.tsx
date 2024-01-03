@@ -1,10 +1,10 @@
 import { getServerSession } from "next-auth";
 import React from "react";
-import { OPTIONS } from "../api/auth/[...nextauth]/route";
+import { authOptions } from "../api/auth/[...nextauth]/route";
 import LogoutButton from "./logoutButton";
 
 const Dashboard = async () => {
-  const session = await getServerSession(OPTIONS);
+  const session = await getServerSession(authOptions);
 
   return (
     <div>
