@@ -53,11 +53,7 @@ const RegisterForm = () => {
     >
       {error && (
         <Form.Item>
-          <Alert
-            message={error.replace(/'/g, "&apos;")}
-            type="error"
-            showIcon
-          />
+          <Alert message={error} type="error" showIcon />
         </Form.Item>
       )}
       {isRegisterSuccess && (
@@ -71,7 +67,7 @@ const RegisterForm = () => {
       )}
       <p className="text-2xl font-bold">Welcome</p>
       <p className="text-md mb-10 text-gray-500">
-        First, let's create your account
+        First, lets create your account
       </p>
       <Form.Item<FieldType>
         label="Fullname"

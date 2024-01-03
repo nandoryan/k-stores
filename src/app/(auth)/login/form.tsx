@@ -56,11 +56,7 @@ const LoginForm = () => {
     >
       {error && (
         <Form.Item>
-          <Alert
-            message={error.replace(/'/g, "&apos;")}
-            type="error"
-            showIcon
-          />
+          <Alert message={error} type="error" showIcon />
         </Form.Item>
       )}
       <p className="text-2xl font-bold">Hello, Welcome Back</p>
@@ -109,7 +105,7 @@ const LoginForm = () => {
       </Form.Item>
 
       <p className="text-md">
-        Don't have account?{" "}
+        Dont have account?
         <NextLink href="/register">
           <span className="text-blue-600 hover:cursor-pointer">
             Register Now!
